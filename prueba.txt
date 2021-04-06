@@ -1,0 +1,7 @@
+inicio = int(input('Ingrese el primero número de la secuencia\n'))
+fin = int(input('Ingrese el ultimo número de la secuencia\n'))
+
+suma = 0
+for i in range(inicio,fin+1):
+    suma = suma + i
+    continue
