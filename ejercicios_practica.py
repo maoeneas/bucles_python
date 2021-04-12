@@ -74,6 +74,15 @@ def ej2():
         # for i in range(len(colores)):
         #     print("indice=",i,"color=",colores[i])
         # print("\n")
+        
+        # NOTA: claro, recorda que para acceder a cada elemento de la lista utilizas los corchetes, al igual que haciamos para 
+        # los strings, entonces, cuando haces lista[0] elegis el primer elemento de la lista.
+        # en un for, lo que tenes que hacer es:
+        # for indice in range(len(colores)):
+        # print(colores[indice])
+        # entonces, el range toma como argumento dentro de sus parentesis el largo (len) de la lista "colores"
+        # de manera que el len(colores) te devuelve el número de elementos dentro de la lista!
+        
 def ej3():
     # Ejemplos con bucles "for"
 
@@ -94,22 +103,25 @@ def ej4():
     # Realizar un bucle "while" cuya condición de continuidad
     # sea que <x sea menor a 10> y que <x sea distinto de 6>
     # Colocar ambas condiciones como condicion del "while" realizando
-    while x<10:
+    while x<10: # --> acá tiene que ser while (x < 10) and (x != 6): y luego el incrementador x += 2
         if x== 6:
             x= x+1    
         print("el valor de x es:", x)
         x= x+1    
-        
+    
 
     # una condición compuesta (utilice el operador "and" o "or" según corresponda)
     # En cada iteracion del bucle debe incrementar el valor de "x" en "2"
     # e imprimir en pantalla el resultado de X (antes de incrementar) con print
-
+    
     # Realice el mismo bucle "while" pero en vez de estar formado por una condición
     # compuesta, que el "while" siga iterando mientras <x sea menos a 10>, y dentro del
     # "while" consultar si <x es igual a 6>, y en ese caso realizar una interrupción del bucle
     # En cada iteracion del bucle debe incrementar el valor de "x" en "2"
     # e imprimir en pantalla el resultado de X (antes de incrementar) con print
+    
+    # Acá sí tenes que hacer el if x == 6: -->break!
+    
 
 
 def ej5():
@@ -129,6 +141,12 @@ def ej5():
 
     for d in [final]:
         print(i + d)    
+        
+    # Aquí el for tendría que usar el range(inicio,fin+1) de la siguiente forma
+    # sumatoria = 0
+    # for numero in range(inicio,fin+1):
+    #     sumatorio += numero
+    # print("La sumatoria de los numero ingresados es:", sumatoria)
 
 
 def ej6():
@@ -143,10 +161,10 @@ def ej6():
     inicio = int(input('Ingrese el primero número de la secuencia\n'))
     final = int(input('Ingrese el ultimo número de la secuencia\n'))
 
-    for i in range(inicio):
-        if (i % 2) == 0:
+    for i in range(inicio): # Acá lo arrancaste bien, pero tenes que usar range(inicio,fin+1)
+        if (i % 2) == 0: # El condicional tiene que encuestar if (i < 0): --> para los negativos
             print("cant positivos:", i)
-        elif (i % 2) == 1:
+        elif (i % 2) == 1: # Este tiene que encuestar if (i >= 0): --> para los numeros mayores o iguales a cero
             print("cant negativos:", i)
 
 if __name__ == '__main__':
